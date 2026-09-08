@@ -7,8 +7,8 @@ This project is a Persona 3 Reload-inspired calendar website built with HTML, CS
 The calendar is designed to feel like a stylized in-game interface rather than a traditional calendar application.
 
 ## Project Structure
-
-``project/
+```
+project/
 ├── index.html
 ├── css/
 │   └── style.css
@@ -17,7 +17,8 @@ The calendar is designed to feel like a stylized in-game interface rather than a
 └── src/
     ├── background.mp4
     ├── favicon.ico
-    └── preview.png``
+    └── preview.png
+```
 
 ## Preview
 
