@@ -4,6 +4,7 @@
     margin: 0;
     font-family: sans-serif;
     font-weight: 600;
+    user-select: none;
 }
 
 :root {
