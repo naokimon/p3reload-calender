@@ -8,7 +8,7 @@ The calendar is designed to feel like a stylized in-game interface rather than a
 
 ## Project Structure
 
-project/
+``project/
 ├── index.html
 ├── css/
 │   └── style.css
@@ -17,7 +17,7 @@ project/
 └── src/
     ├── background.mp4
     ├── favicon.ico
-    └── preview.png
+    └── preview.png``
 
 ## Preview
 
