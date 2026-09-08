@@ -95,11 +95,9 @@ body {
     border-radius: 100%;
 }
 
-#myVideo {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  width: 110%;
-  height: 110%;
-  z-index: -1;
+.background {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
 }
