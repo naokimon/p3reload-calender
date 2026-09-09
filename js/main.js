@@ -26,7 +26,7 @@ function refreshPage(date) {
     for (let i = 0; i < overlappingDays; i++) {
         const dayLastMonth = document.createElement("li");
         dayLastMonth.textContent = lastDayOfLastMonth.getDate() - overlappingDays + 1 + i;
-        dayLastMonth.classList.add("last-month");
+        dayLastMonth.classList.add("other-month");
         days.appendChild(dayLastMonth);
     }
 
@@ -44,6 +44,19 @@ function refreshPage(date) {
             day.classList.add("next-days")
         }
         days.appendChild(day);
+    }
+
+    const amountOfTotalDays = days.children.length;
+    const amountToBeDisplayed = 7 - (amountOfTotalDays % 7);
+    console.log(amountToBeDisplayed)
+
+    if (amountToBeDisplayed < 7) {
+            for (let i = 1; i <= amountToBeDisplayed; i++) {
+            let day = document.createElement("li");
+            day.textContent = i;
+            day.classList.add("other-month");
+            days.appendChild(day);
+        }
     }
 }
 
