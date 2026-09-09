@@ -14,16 +14,20 @@ function refreshPage(date) {
     const monthYear = document.getElementById("month-year");
     monthYear.innerHTML = `${month[date.getMonth()]} ${date.getFullYear()}`;
 
-    const lastDayOfMonth = new Date(date.getFullYear(),date.getMonth() + 1, 1-1);
+    const lastDayOfMonth = new Date(date.getFullYear(), date.getMonth() + 1, 0);
+    const lastDayOfLastMonth = new Date(date.getFullYear(), date.getMonth(), 0);
     const numberOfDays = lastDayOfMonth.getDate();
 
-    const firstDayOfMonth = new Date(date.getFullYear(),date.getMonth(), 1);
+    const firstDayOfMonth = new Date(date.getFullYear(), date.getMonth(), 1);
     const firstDayOfMonthDay = firstDayOfMonth.getDay();
 
-    for (let i = 1; i < firstDayOfMonthDay + 1; i++) {
-        const emptyDay = document.createElement("li");
-        emptyDay.classList.add("empty");
-        days.appendChild(emptyDay);
+    const overlappingDays = firstDayOfMonthDay;
+
+    for (let i = 0; i < overlappingDays; i++) {
+        const dayLastMonth = document.createElement("li");
+        dayLastMonth.textContent = lastDayOfLastMonth.getDate() - overlappingDays + 1 + i;
+        dayLastMonth.classList.add("last-month");
+        days.appendChild(dayLastMonth);
     }
 
     for (let i = 1; i <= numberOfDays; i++) {

@@ -101,6 +101,10 @@ body {
     border-radius: 100%;
 }
 
+.last-month {
+    color: rgb(139, 139, 139);
+}
+
 .background {
   position: absolute;
   width: 100vw;
