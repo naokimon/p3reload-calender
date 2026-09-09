@@ -67,16 +67,22 @@ function goForward() {
     refreshPage(date);
 }
 
+const qbutton = document.getElementById("btn-q")
+const ebutton = document.getElementById("btn-e")
+
 document.addEventListener("keydown", (event) => {
     if (event.keyCode == 81) {
+        qbutton.classList.remove("pulse");
+        void qbutton.offsetWidth;
+        qbutton.classList.add("pulse");
         goBack();
     } else if (event.keyCode == 69) {
+        ebutton.classList.remove("pulse");
+        void ebutton.offsetWidth;
+        ebutton.classList.add("pulse");
         goForward();
     }
 })
-
-const qbutton = document.getElementById("btn-q")
-const ebutton = document.getElementById("btn-e")
 
 qbutton.addEventListener("click", (event) => {
     goBack();
