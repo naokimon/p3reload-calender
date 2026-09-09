@@ -121,3 +121,37 @@ body {
 .pulse {
   animation: pulse 0.3s ease;
 }
+
+@media (max-width: 600px) {
+    .calender {
+        bottom: 20px;
+        right: 10px;
+        left: 10px;
+        width: auto;
+        height: 60vh;
+        padding: 10px;
+    }
+
+    .header {
+        font-size: 1.1rem;
+    }
+
+    .header .button {
+        width: 36px;
+        height: 36px;
+    }
+
+    .weekdays {
+        font-size: 0.8rem;
+    }
+
+    .days li {
+        height: auto;
+        aspect-ratio: 1 / 1;
+        font-size: 0.9rem;
+    }
+
+    .today {
+        border-width: 3px;
+    }
+}
