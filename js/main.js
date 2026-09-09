@@ -43,14 +43,6 @@ function refreshPage(date) {
     }
 }
 
-document.addEventListener("keydown", (event) => {
-    if (event.keyCode == 81) {
-        goBack();
-    } else if (event.keyCode == 69) {
-        goForward();
-    }
-})
-
 function goBack() {
     let month = currentDate.getMonth() - 1;
     let year = currentDate.getFullYear();
@@ -74,5 +66,24 @@ function goForward() {
     const date = new Date(year, month);
     refreshPage(date);
 }
+
+document.addEventListener("keydown", (event) => {
+    if (event.keyCode == 81) {
+        goBack();
+    } else if (event.keyCode == 69) {
+        goForward();
+    }
+})
+
+const qbutton = document.getElementById("btn-q")
+const ebutton = document.getElementById("btn-e")
+
+qbutton.addEventListener("click", (event) => {
+    goBack();
+})
+
+ebutton.addEventListener("click", (event) => {
+    goForward();
+})
 
 refreshPage(viewedDate)
